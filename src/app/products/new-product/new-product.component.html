@@ -7,13 +7,15 @@
 
             <!--Input New Product Image File-->
             <div class="text-center">
-            <label class="btn btn-warning btn-lg"><i class="material-icons" style="padding: 4px;">add_a_photo</i><span
-                    id="your-id-text"> Add new product photo</span>
-                <i *ngIf="loaded" class="material-icons glyphicon btn-glyphicon img-circle">&#xE876;</i>
-                <input name="driverLicenseFile" class="user-avatar-upload" type="file" style="display: none;"
-                       accept="image/*"
-                       (change)="uploadProductImage($event)">
-            </label>
+                <label class="btn btn-warning btn-lg">
+                    <i class="material-icons" style="padding: 4px;">add_a_photo</i>
+                    <span> Add new product photo</span>
+                    <i *ngIf="loaded" class="material-icons glyphicon btn-glyphicon img-circle">&#xE876;</i>
+                    <input name="productImageFile" type="file" style="display: none;"
+                           accept="image/*"
+                           (change)="uploadProductImage($event)">
+                </label>
+
             </div>
             <div class="preview-upload-img">
                 <img [src]="productImageUrl">
@@ -47,16 +49,16 @@
             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !description.valid }">
                 <label for="description" class="text-proxima-regular-14 font-color-grey">Add Description</label>
 
-            <textarea name="text"
-                      [(ngModel)]="_description"
-                      class="form-control"
-                      id="description"
-                      #description="ngModel"
-                      placeholder="Description" required></textarea>
+                <textarea name="text"
+                          [(ngModel)]="_description"
+                          class="form-control"
+                          id="description"
+                          #description="ngModel"
+                          placeholder="Description" required></textarea>
 
                 <div *ngIf="f.submitted && !description.valid" class="help-block">Description is required</div>
             </div>
-            <button [disabled]="loading" class="btn btn-lg btn-warning" style="width: 420px;">Create product
+            <button class="btn btn-lg btn-warning" style="width: 420px;">Create product
             </button>
         </form>
     </div>

@@ -17,9 +17,6 @@ export class ProductsListComponent implements OnInit {
 
     ngOnInit() {
         this.getAllBikes()
-        console.log(this._bikeImageUrl)
-        console.log(this._description)
-        console.log(this._productName)
     }
 
     public getAllBikes() {
