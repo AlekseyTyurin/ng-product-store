@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="form-card">
+
+        <h2>Create new product</h2>
+
+        <form name="form" (ngSubmit)="f.form.valid && saveNewProduct()" #f="ngForm" novalidate>
+
+            <!--Input New Product Image File-->
+            <div class="text-center">
+            <label class="btn btn-warning btn-lg"><i class="material-icons" style="padding: 4px;">add_a_photo</i><span
+                    id="your-id-text"> Add new product photo</span>
+                <i *ngIf="loaded" class="material-icons glyphicon btn-glyphicon img-circle">&#xE876;</i>
+                <input name="driverLicenseFile" class="user-avatar-upload" type="file" style="display: none;"
+                       accept="image/*"
+                       (change)="uploadProductImage($event)">
+            </label>
+            </div>
+            <div class="preview-upload-img">
+                <img [src]="productImageUrl">
+            </div>
+            <br><br>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !productname.valid }">
+                <label for="productname">Product Name</label>
+                <input type="text"
+                       class="form-control"
+                       name="productname"
+                       [(ngModel)]="_productname"
+                       #productname="ngModel"
+                       id="productname"
+                       placeholder="Product Name" required>
+
+                <div *ngIf="f.submitted && !productname.valid" class="help-block">Product name is required</div>
+            </div>
+
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !price.valid }">
+                <label>Price</label>
+
+                <input type="text"
+                       class="form-control"
+                       name="price"
+                       [(ngModel)]="_price"
+                       #price="ngModel"
+                       placeholder="Product price" required>
+                <div *ngIf="f.submitted && !price.valid" class="help-block">Product price is required</div>
+            </div>
+
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !description.valid }">
+                <label for="description" class="text-proxima-regular-14 font-color-grey">Add Description</label>
+
+            <textarea name="text"
+                      [(ngModel)]="_description"
+                      class="form-control"
+                      id="description"
+                      #description="ngModel"
+                      placeholder="Description" required></textarea>
+
+                <div *ngIf="f.submitted && !description.valid" class="help-block">Description is required</div>
+            </div>
+            <button [disabled]="loading" class="btn btn-lg btn-warning" style="width: 420px;">Create product
+            </button>
+        </form>
+    </div>
+</div>

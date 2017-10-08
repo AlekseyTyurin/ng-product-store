@@ -44,7 +44,7 @@
     "genre": "fantasy",
     "specifications": "Paperback, 366 pages",
     "inStock": true,
-    "price": 14.95,
+    "price": 11499.99,
     "starRating": 4.23,
     "imageUrl": "assets/images/cannondale-supersix-evo-hi-mod-dura-ace-277975-11.jpg"
   },
@@ -58,7 +58,7 @@
     "genre": "horror",
     "specifications": "Paperback, 790 pages",
     "inStock": true,
-    "price": 9.95,
+    "price": 10699.99,
     "starRating": 3.87,
     "imageUrl": "assets/images/cannondale-supersix-evo-hi-mod-etap-277974-1.jpg"
   },
@@ -72,7 +72,7 @@
     "genre": "fiction",
     "specifications": "Paperback, 324 pages",
     "inStock": true,
-    "price": 8.95,
+    "price": 13099.99,
     "starRating": 4.24,
     "imageUrl": "assets/images/cannondale-supersix-evo-hydraulic-disc-ultegra-di2-277981-1.jpg"
   },
@@ -86,7 +86,7 @@
     "genre": "nonfiction",
     "specifications": "Paperback, 352 pages",
     "inStock": true,
-    "price": 11.95,
+    "price": 9499.99,
     "starRating": 3.75,
     "imageUrl": "assets/images/cannondale-synapse-hydraulic-disc-ultegra-di2-277919-11.jpg"
   },
@@ -100,7 +100,7 @@
     "genre": "nonfiction",
     "specifications": "Hardcover, 216 pages",
     "inStock": true,
-    "price": 14.95,
+    "price": 14299.99,
     "starRating": 4.12,
     "imageUrl": "assets/images/liv-envie-advanced-pro-0-womens-264240-1.jpg"
   }

@@ -11,6 +11,7 @@ import {ProductsListComponent} from './products-list/products-list.component';
 import {ProductsComponent} from "./products.component";
 import {HttpModule} from "@angular/http";
 import {BikeService} from "../services/bike.service";
+import { NewProductComponent } from './new-product/new-product.component';
 
 @NgModule({
     imports: [
@@ -26,7 +27,8 @@ import {BikeService} from "../services/bike.service";
         NavbarComponent,
         FooterComponent,
         CharLimitPipe,
-        ProductsListComponent
+        ProductsListComponent,
+        NewProductComponent
     ],
     providers: [
         BikeService

@@ -1,0 +1,170 @@
+.container{
+    height: calc(100vh - 60px);
+}
+
+/* Forms */
+.form-card{
+    box-sizing: border-box;
+    width: 560px;
+    /*max-height: 70vh;*/
+    /*max-width: 30vw;*/
+    background-color: white;
+    margin: 70px auto 20px auto;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    padding: 40px 70px;
+    border-radius: 25px;
+}
+
+.btn-new-product {
+    height: 42px;
+}
+
+.btn-driver-id > i.img-circle {
+    color: #FB9422;
+    font-size: 32px;
+}
+
+.preview-upload-img {
+    text-align: center;
+    margin: 5px 0px auto;
+}
+
+.preview-upload-img img {
+    margin-top: 7px;
+    max-height: 270px;
+}
+
+.preview-upload-avt-img {
+    /* max-height: 105px; */
+    position: relative;
+    z-index: 2;
+    bottom: 166px;
+    right: 0px;
+    border-radius: 50%;
+}
+
+.preview-upload-avt-img img {
+    max-height: 102px;
+}
+
+label.label-active {
+    color: rgb(255, 143, 44);
+}
+
+form .form-group input:focus {
+    outline: none !important;
+    border: 1px solid rgb(255, 143, 44);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    /*box-shadow: 0 0 10px rgb(255, 143, 44);*/
+}
+
+input:focus + label {
+    color: rgb(255, 143, 44);
+}
+
+.forgot-password {
+    width: 50%;
+    float: left;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/*form input:focus ~ label {*/
+/*color: rgb(255, 143, 44);*/
+/*}*/
+
+/*label {*/
+/*position: relative;*/
+/*bottom: 64px;*/
+/*}*/
+
+.orange-circle-button {
+    box-shadow: 0px 0px 10px rgb(255, 143, 44);
+    -webkit-box-shadow: 0px 0px 10px rgb(255, 143, 44);
+    -moz-box-shadow: 0px 0px 10px rgb(255, 143, 44);
+
+    border: .3em solid #FF8F2C;
+    font-size: 1em;
+    line-height: 1.1em;
+    color: #ffffff;
+    background-color: #FF8F2C;
+    border-radius: 50%;
+    height: 7em;
+    width: 7em;
+    position: relative;
+    top: -65px;
+}
+
+.orange-circle-button:hover {
+    color: #ffffff;
+    background-color: #FF8F2C;
+    text-decoration: none;
+    border-color: #ff7536;
+
+}
+
+.orange-circle-button:visited {
+    color: #ffffff;
+    background-color: #FF8F2C;
+    text-decoration: none;
+
+}
+
+.orange-circle-button > i.material-icons {
+    font-size: 42px;
+    position: relative;
+    top: 20%
+}
+
+.center-cropped {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    bottom: 185px;
+    left: 140px;
+    margin-bottom: -140px;
+    border-radius: 50%;
+    background: center center no-repeat;
+    overflow: hidden;
+    /*background: url(blah.jpg) 50% 50% no-repeat;*/
+}
+
+/*Set the image to fill its parent and make transparent */
+.center-cropped img {
+    background: 50% 50% #FFFFFF;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.neo {
+    background: 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.btn-driver-id {
+    height: 42px;
+}
+
+.btn-driver-id > i.img-circle {
+    color: #FB9422;
+    font-size: 32px;
+}
+
+.btn-glyphicon {
+    padding: 1px;
+}
+
+.glyphicon {
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+
+/* Form Validation */
+
+.help-block {
+    font-size: 14px;
+}
