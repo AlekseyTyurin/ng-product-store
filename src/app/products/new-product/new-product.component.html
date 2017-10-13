@@ -37,11 +37,13 @@
             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !price.valid }">
                 <label>Price</label>
 
-                <input type="text"
+                <input type="number"
                        class="form-control"
                        name="price"
                        [(ngModel)]="_price"
                        #price="ngModel"
+                       min="0" step="1"
+
                        placeholder="Product price" required>
                 <div *ngIf="f.submitted && !price.valid" class="help-block">Product price is required</div>
             </div>

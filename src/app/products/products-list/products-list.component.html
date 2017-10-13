@@ -33,8 +33,9 @@
             </li>
         </ul>
 
-        <ul class="grid" *ngIf="_loaded">
-            <li class="grid-tile">
+        <!--<ul class="grid" *ngIf="_loaded || data != null">-->
+        <ul class="grid" *ngIf="_loaded || data != null">
+            <li class="grid-tile" *ngFor="let bike of bikesFromLocalStorage">
                 <div class="item">
                     <div>
                         <img src="{{_bikeImageUrl}}" class="item-img">
@@ -46,7 +47,7 @@
                                 <div style="font-size: 10px; line-height: 120%; text-align: justify;">{{_description | charLimit: 130}}
                                 </div>
                                 <hr>
-                                <span class="pnl-price">{{_bikePrice}}</span>
+                                <span class="pnl-price">{{_productPrice | currency: 'USD' : true}}</span>
                             </div>
                             <div class="pnl-favorites">
                                 <div class="pnl-ic-wrapper">

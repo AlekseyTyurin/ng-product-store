@@ -9,14 +9,32 @@ import {BikeService} from "../../services/bike.service";
 })
 export class ProductsListComponent implements OnInit {
     public bikes: Bike[];
+    public bikesFromLocalStorage;
     errorMessage: string;
-    loadedData: boolean = false;
+    _description;
+    _bikeImageUrl;
+    _productName;
+    _productPrice;
+    _loaded;
 
     constructor(private _getBikes: BikeService,) {
+
+        this.bikesFromLocalStorage = JSON.parse(localStorage.getItem('data'));
+        console.log(this.bikesFromLocalStorage);
+        for (let i in this.bikesFromLocalStorage) {
+            this._bikeImageUrl = this.bikesFromLocalStorage[i].bikeImageUrl;
+            this._description = this.bikesFromLocalStorage[i].description;
+            this._productName = this.bikesFromLocalStorage[i].productName;
+            this._productPrice = this.bikesFromLocalStorage[i].productPrice;
+            console.log(this._description)
+        }
     }
 
     ngOnInit() {
-        this.getAllBikes()
+        this.getAllBikes();
+        if (this.bikesFromLocalStorage.description != ''){
+            this._loaded = true;
+        }
     }
 
     public getAllBikes() {
@@ -25,26 +43,6 @@ export class ProductsListComponent implements OnInit {
                 (data) => this.bikes = data,
                 (error) => this.errorMessage = <any>error
             )
-    }
-
-    get _bikeImageUrl(): string {
-        return this._getBikes.bike.bikeImageUrl;
-    }
-
-    get _description(): string {
-        return this._getBikes.bike.description;
-    }
-
-    get _productName(): string {
-        return this._getBikes.bike.productName;
-    }
-
-    get _bikePrice(): string {
-        return this._getBikes.bike.productPrice;
-    }
-
-    get _loaded():boolean {
-        return this._getBikes.bike.loaded;
     }
 
 }

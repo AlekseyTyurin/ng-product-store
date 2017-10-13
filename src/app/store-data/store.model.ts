@@ -1,7 +1,7 @@
-export class BikeStore {
+export class BikeStorage {
     bikeImageUrl: string;
     productName: string;
-    productPrice: string;
+    productPrice: number;
     description: string;
     loaded: boolean;
 }

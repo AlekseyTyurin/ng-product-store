@@ -12,4 +12,11 @@ export interface Bike {
     imageUrl: string;
 }
 
+export interface BikeFromLocalStorage {
+    id?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    imageUrl?: string;
+}
 

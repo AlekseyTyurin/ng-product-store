@@ -20,6 +20,7 @@ export class NewProductComponent implements OnInit {
     }
 
     ngOnInit() {
+
     }
 
     public uploadProductImage(e: any) {
@@ -53,14 +54,21 @@ export class NewProductComponent implements OnInit {
     set _productname(value: string) {
         this._saveNewBike.bike.productName = value;
     }
-    set _price(value: string) {
+
+    set _price(value: number) {
         this._saveNewBike.bike.productPrice = value;
     }
+
     set _description(value: string) {
         this._saveNewBike.bike.description = value;
     }
 
-    saveNewProduct(){
+    validate(value) {
+        value < 0 ? this._price = 0 : this._price = value;
+    }
+
+    saveNewProduct() {
+        this._saveNewBike.saveToLocalStorage();
         this.router.navigateByUrl('/');
         this._saveNewBike.bike.loaded = true;
     }
